@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python/
+env/
+venv/
+.venv/
+*.egg-info/
+.tox/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Data
+data/raw/*.csv
+data/raw/*.zip
+data/interim/
+data/processed/
+
+# Models
+models/
+
+# Logs
+*.log
+
+# Environment variables
+.env
+
+# MLflow
+mlruns/
