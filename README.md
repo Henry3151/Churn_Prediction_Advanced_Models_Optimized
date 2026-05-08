@@ -107,13 +107,13 @@ graph TD
         CONFIG["📄 requirements.txt\nMakefile · README.md"]
     end
 
-    style PROJETO fill:#0d1117,stroke:#30363d,color:#e6edf3
-    style SRC fill:#1a2332,stroke:#388bfd,color:#e6edf3
-    style DATA fill:#1a2d1a,stroke:#3fb950,color:#e6edf3
-    style NOTEBOOKS fill:#2d1f3d,stroke:#bc8cff,color:#e6edf3
-    style TESTS fill:#2d1f1f,stroke:#f85149,color:#e6edf3
-    style ARTIFACTS fill:#2d2a1f,stroke:#d29922,color:#e6edf3
-    style MLFLOW_DIR fill:#1f2a2d,stroke:#39c5cf,color:#e6edf3
+    style PROJETO fill:#f8faff,stroke:#4a6fa5,color:#111111
+    style SRC fill:#dbeafe,stroke:#2563eb,color:#111111
+    style DATA fill:#dcfce7,stroke:#16a34a,color:#111111
+    style NOTEBOOKS fill:#ede9fe,stroke:#7c3aed,color:#111111
+    style TESTS fill:#fee2e2,stroke:#dc2626,color:#111111
+    style ARTIFACTS fill:#fef9c3,stroke:#ca8a04,color:#111111
+    style MLFLOW_DIR fill:#cffafe,stroke:#0891b2,color:#111111
 ```
 
 ---
@@ -149,11 +149,11 @@ flowchart TD
 
     D --> E([✅ Features Prontas\npara Modelagem])
 
-    style A fill:#1a2d1a,stroke:#3fb950,color:#e6edf3
-    style B fill:#1a2332,stroke:#388bfd,color:#c9d1d9
-    style C fill:#2d1f3d,stroke:#bc8cff,color:#c9d1d9
-    style D fill:#2d2a1f,stroke:#d29922,color:#c9d1d9
-    style E fill:#1a2d1a,stroke:#3fb950,color:#e6edf3
+    style A fill:#dcfce7,stroke:#16a34a,color:#111111
+    style B fill:#dbeafe,stroke:#2563eb,color:#111111
+    style C fill:#ede9fe,stroke:#7c3aed,color:#111111
+    style D fill:#fef9c3,stroke:#ca8a04,color:#111111
+    style E fill:#dcfce7,stroke:#16a34a,color:#111111
 ```
 
 ---
@@ -169,12 +169,12 @@ flowchart LR
     --> E[📈 MLflow Tracking\nParams · Metrics · Artefatos]
     --> F[📓 model_evaluation.ipynb\nAUC-ROC · PR-AUC · F1]
 
-    style A fill:#1a2d1a,stroke:#3fb950,color:#e6edf3
-    style B fill:#1a2332,stroke:#388bfd,color:#e6edf3
-    style C fill:#2d1f3d,stroke:#bc8cff,color:#e6edf3
-    style D fill:#2d1f1f,stroke:#f85149,color:#e6edf3
-    style E fill:#1f2a2d,stroke:#39c5cf,color:#e6edf3
-    style F fill:#2d2a1f,stroke:#d29922,color:#e6edf3
+    style A fill:#dcfce7,stroke:#16a34a,color:#111111
+    style B fill:#dbeafe,stroke:#2563eb,color:#111111
+    style C fill:#ede9fe,stroke:#7c3aed,color:#111111
+    style D fill:#fee2e2,stroke:#dc2626,color:#111111
+    style E fill:#cffafe,stroke:#0891b2,color:#111111
+    style F fill:#fef9c3,stroke:#ca8a04,color:#111111
 ```
 
 ---
@@ -206,13 +206,13 @@ graph LR
     D2 --> D3[Dense 1]
     D3 --> SIG([Sigmoid\nOutputChurn Prob])
 
-    style IN fill:#1a2d1a,stroke:#3fb950,color:#e6edf3
-    style SIG fill:#1a2d1a,stroke:#3fb950,color:#e6edf3
-    style BN fill:#1a2332,stroke:#388bfd,color:#e6edf3
-    style D1 fill:#2d1f3d,stroke:#bc8cff,color:#e6edf3
-    style DR fill:#2d1f1f,stroke:#f85149,color:#e6edf3
-    style D2 fill:#2d1f3d,stroke:#bc8cff,color:#e6edf3
-    style D3 fill:#2d1f3d,stroke:#bc8cff,color:#e6edf3
+    style IN fill:#dcfce7,stroke:#16a34a,color:#111111
+    style SIG fill:#dcfce7,stroke:#16a34a,color:#111111
+    style BN fill:#dbeafe,stroke:#2563eb,color:#111111
+    style D1 fill:#ede9fe,stroke:#7c3aed,color:#111111
+    style DR fill:#fee2e2,stroke:#dc2626,color:#111111
+    style D2 fill:#ede9fe,stroke:#7c3aed,color:#111111
+    style D3 fill:#ede9fe,stroke:#7c3aed,color:#111111
 ```
 
 | Componente | Detalhe |
@@ -324,7 +324,7 @@ mlflow ui --backend-store-uri sqlite:///mlflow.db
 
 <div align="center">
 
-**Desenvolvido por [Henry](https://github.com/Henry3151)**  
+**Desenvolvido por [Henrique Silva](https://github.com/Henry3151)**  
 *Tech Challenge · FIAP + Alura · 2026*
 
 </div>
