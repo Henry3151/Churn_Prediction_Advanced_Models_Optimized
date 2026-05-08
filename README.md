@@ -223,13 +223,27 @@ graph LR
 | **Cross-validation** | Estratificada 5-fold |
 | **Hiperparâmetros** | Otimizados via **Optuna** |
 
-### Comparação de Modelos
+### Comparação de Modelos — MLflow Experiment
 
-| Modelo | AUC-ROC | F1 | PR-AUC |
-|:---:|:---:|:---:|:---:|
-| Dummy Classifier | 0.50 | 0.21 | 0.26 |
-| Logistic Regression | 0.84 | 0.72 | 0.78 |
-| **MLP PyTorch** ⭐ | **0.93** | **0.85** | **0.88** |
+> Experimento: `Churn_Prediction_Advanced_Models_Optimized` · 4 runs · Otimização via **GridSearchCV**
+
+```mermaid
+bar
+    title AUC-ROC por Modelo
+    x-axis [LogReg, RandomForest, GradientBoosting, SVC, MLP PyTorch]
+    y-axis "AUC-ROC" 0.5 --> 1.0
+    bar [0.840, 0.841, 0.846, 0.836, 0.930]
+```
+
+| Modelo | AUC-ROC | PR-AUC | F1-Score | Duração | Params Notáveis |
+|:---|:---:|:---:|:---:|:---:|:---|
+| Logistic Regression | 0.840 | 0.620 | 0.613 | 5.6s | `penalty=l1`, `solver=liblinear` |
+| Random Forest | 0.841 | 0.642 | 0.627 | 4.4s | `n_estimators=200`, `max_depth=5`, `min_samples_split=5` |
+| Gradient Boosting | 0.846 | 0.662 | 0.625 | 4.6s | `n_estimators=100`, `max_depth=3`, `lr=0.05` |
+| SVC | 0.836 | 0.577 | 0.615 | 10.1s | `C=0.1`, `kernel=rbf` |
+| **MLP PyTorch** ⭐ | **0.930** | **0.880** | **0.850** | — | `Early Stopping`, `Optuna`, `5-Fold CV` |
+
+> 💡 **Insight do Parallel Coordinates Plot:** valores de `C` mais baixos (0.1) no SVC com `kernel=rbf` e `learning_rate=0.06` no GBM tenderam a AUC-ROC mais altos entre os modelos clássicos. O **MLP PyTorch supera todos** com margem expressiva em todas as métricas.
 
 ---
 
@@ -238,7 +252,19 @@ graph LR
 > Experimento: `Churn_Prediction_Advanced_Models_Optimized`
 
 <details>
-<summary><b>Métricas e Artefatos Rastreados</b></summary>
+<summary><b>📋 Detalhes dos 4 Runs Rastreados</b></summary>
+
+| Run | Modelo | Run ID | Início | Duração |
+|---|---|---|---|---|
+| 1 | LogisticRegression_Optimized | `25e12779` | 08/05/2026 13:05:29 | 5.6s |
+| 2 | RandomForestClassifier_Optimized | `49cf9bfc` | 08/05/2026 13:05:45 | 4.4s |
+| 3 | GradientBoostingClassifier_Optimized | `84ffdf54` | 08/05/2026 13:05:57 | 4.6s |
+| 4 | SVC_Optimized | `20c1df1b` | 08/05/2026 13:06:36 | 10.1s |
+
+</details>
+
+<details>
+<summary><b>📊 Métricas e Artefatos Rastreados (MLP Final)</b></summary>
 
 **Métricas por época:**
 - `train_loss`, `val_loss`
