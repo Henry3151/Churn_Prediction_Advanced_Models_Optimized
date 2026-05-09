@@ -91,7 +91,7 @@ churn-prediction/
 ├── mlruns/                         # Artefatos MLflow
 ├── mlflow.db                       # Backend SQLite MLflow
 ├── Dockerfile
-├── ARCHITECTURE.md                 # Arquitetura de deploy detalhada
+├── architecturedeploy.md           # Arquitetura de deploy detalhada
 └── pyproject.toml                  # Configuracao ruff + pytest
 ```
 
@@ -361,7 +361,7 @@ mlflow ui --backend-store-uri sqlite:///mlflow.db
 
 ## Documentacao
 
-- [ARCHITECTURE.md](ARCHITECTURE.md) — decisoes de deploy, endpoints, arquitetura de producao e versionamento de modelo
+- [architecturedeploy.md](architecturedeploy.md) — decisoes de deploy, endpoints, arquitetura de producao e versionamento de modelo
 
 ---
 
