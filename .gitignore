@@ -33,3 +33,8 @@ build/
 # Logs
 logs/
 *.log
+# Segredos e artefatos locais
+.env
+.env.*
+!.env.example
+pytest_output.txt
